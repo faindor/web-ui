@@ -1,13 +1,89 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description"
+    content="Faindor is a free and open-source social media platform to share everything with the people in your organization." />
+  <meta name="keywords"
+    content="Faindor, social media, free, open-source, social media platform, organization, company, people" />
+  <meta name="author" content="Galo Benjamin Bello Ponce" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/svg+xml" href="/faindor-logo-rounded.webp" />
+  <title>Faindor</title>
+
+  <style>
+    @keyframes loader-entrance {
+      0% {
+        animation-timing-function: ease-in;
+        opacity: 0;
+        transform: translateY(-250px);
+      }
+
+      38% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      55% {
+        animation-timing-function: ease-in;
+        transform: translateY(-65px);
+      }
+
+      72% {
+        animation-timing-function: ease-out;
+        transform: translateY(0);
+      }
+
+      81% {
+        animation-timing-function: ease-in;
+        transform: translateY(-28px);
+      }
+
+      90% {
+        animation-timing-function: ease-out;
+        transform: translateY(0);
+      }
+
+      95% {
+        animation-timing-function: ease-in;
+        transform: translateY(-8px);
+      }
+
+      100% {
+        animation-timing-function: ease-out;
+        transform: translateY(0);
+      }
+    }
+
+    .initial-loader {
+      animation: loader-entrance 1.2s ease 0s infinite normal forwards;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .initial-loader__img {
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="root">
+    <div class="initial-loader">
+      <img class="initial-loader__img" src="/faindor-logo-rounded.webp" alt="Faindor logo loader" />
+    </div>
+  </div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>
